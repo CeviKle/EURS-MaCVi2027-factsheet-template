@@ -1,0 +1,241 @@
+%% Factsheet template for the MaCVi@WACV 2027 EURS Challenge
+%% (Embedded Underwater Restoration and Segmentation)
+%%
+%% Fill in every \todo{...} / red placeholder, delete the example text, and
+%% set \showinstructionsfalse before you build the PDF you send us.
+
+\documentclass{article}
+
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage{colortbl, color, xcolor}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{ifthen}
+
+% ---- switches -------------------------------------------------------------
+\newboolean{showinstructions}
+\setboolean{showinstructions}{true}   % set to false for the PDF you send
+
+% Red placeholder text: replace every \todo{...} before sending.
+\newcommand{\todo}[1]{\textcolor{red}{[#1]}}
+
+\date{}
+\title{MaCVi@WACV 2027 EURS Challenge\\Embedded Underwater Restoration and Segmentation\\Factsheet}
+
+%%% Keep your team name short, without special characters. It can be the name of your method.
+\author{\todo{Author 1}, \todo{Author 2}, \todo{Author 3}\\
+\todo{Affiliation, City, Country}}
+
+\begin{document}
+
+\maketitle
+
+% =============================================================================
+% INSTRUCTIONS (remove from the final PDF with \setboolean{showinstructions}{false})
+% =============================================================================
+\ifthenelse{\boolean{showinstructions}}{%
+\section*{Instructions: how to submit the factsheet}
+
+This factsheet describes the contribution of each participating team in the EURS challenge at MaCVi@WACV 2027. Please address all aspects listed below as completely as you can. The factsheet, the code and the achieved performance on the testing-phase data are used to verify the reported results and to decide on the final EURS ranking.
+
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Reproducibility is a must.} Only reproduced testing-phase results are ranked. The reproduction of your submission must match the testing-phase submission you report here, within normal run-to-run variation.
+    \item \textbf{Detailed descriptions are much appreciated:} a brief description of all models and experiments you tested, ablations, visualisations, things that did not work, external datasets, pre-trained models, ensembles, and so on. Disclose all external data and pre-trained models you used, in the same way as required on the leaderboard.
+    \item \textbf{Fill in one factsheet per team.} If your team took part in both tracks, describe both tracks in the same factsheet. Every team completes Sections~\ref{sec:team} and~\ref{sec:global} and the section of each track it entered (Section~\ref{sec:t1} for Track~1, Section~\ref{sec:t2} for Track~2); teams that entered only one track leave the other track section out.
+\end{enumerate}
+
+\paragraph{What to send.} All factsheets must be sent by e-mail to the EURS track leads and chairs listed below, with all your team members in cc:
+\begin{itemize}[leftmargin=*]
+    \item \textbf{A compiled PDF} of the factsheet.
+    \item \textbf{A \texttt{.zip}} with the \LaTeX{} source files of the factsheet (\texttt{main.tex}, \texttt{ref.bib}, \texttt{images/}, including all figures).
+\end{itemize}
+The factsheet is separate from the code and model weights you hand in for reproduction: provide the code and model-weight link in Section~\ref{sec:team} (Team details) and the exact reproduction commands in Section~\ref{sec:repro}.
+
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{|l|l|}
+    \hline
+    \textbf{Organizer} & \textbf{Email} \\
+    \hline
+    Nikhil Akalwadi & nikhil.akalwadi@kletech.ac.in \\
+    Sampada Malagi & sampadamalagi12@gmail.com \\
+    Sneha Varur & sneha.varur@kletech.ac.in \\
+    Chaitra Desai & chaitra.desai@manipal.edu \\
+    \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\paragraph{E-mail guide.}
+\begin{description}[leftmargin=!,labelwidth=2.2cm]
+    \item[To:] nikhil.akalwadi@kletech.ac.in;\\ sampadamalagi12@gmail.com;\\ sneha.varur@kletech.ac.in;\\ chaitra.desai@manipal.edu
+    \item[Cc:] all your team members
+    \item[Subject:] MaCVi@WACV 2027 EURS Challenge - TEAM\_NAME
+\end{description}
+The body of the e-mail should contain:
+\begin{enumerate}[label=\alph*)]
+    \item the challenge name (MaCVi@WACV 2027 EURS Challenge),
+    \item your team name (exactly as registered on macvi.org),
+    \item the team leader's name and e-mail address,
+    \item the rest of the team members,
+    \item the macvi.org user IDs of all team members, including the team leader,
+    \item the ID and the submitting user ID of your best-scoring testing-phase submission, one per track,
+    \item the link to your code and trained weights (or the attached package),
+    \item the factsheet PDF and the \LaTeX{} source \texttt{.zip} attached.
+\end{enumerate}
+
+\paragraph{Deadline.} \textbf{October 28, 2026, 23:59 AoE (Anywhere on Earth).} Factsheets received after the deadline will not be considered for evaluation.
+
+\bigskip\hrule\bigskip
+\newpage
+}{}
+
+% =============================================================================
+\section{Team details}\label{sec:team}
+\begin{itemize}
+\item \textbf{Team name (as on macvi.org):} \todo{team name}
+\item \textbf{Team leader name:} \todo{name}
+\item \textbf{Team leader institution and email:} \\ \todo{institution, city, country} \\ Email: \todo{leader e-mail}
+\item \textbf{Rest of the team members (name, macvi.org user ID):}
+  \begin{itemize}
+    \item \todo{member 1}, user ID \todo{ID}
+    \item \todo{member 2}, user ID \todo{ID}
+    \item \todo{\dots}
+  \end{itemize}
+\item \textbf{Team website URL (if any):} \todo{URL}
+\item \textbf{Affiliations:} \todo{affiliations}
+\item \textbf{Team leader's user ID on the submission server (macvi.org):} \todo{ID}
+\item \textbf{User IDs on the submission server of \emph{all} team members} (leader included; the IDs of every account that submitted for the team): \todo{ID, ID, \dots}
+\item \textbf{Track(s) entered:} \todo{Track 1 / Track 2 / both}
+\item \textbf{Best-scoring testing-phase submission per track (the one reported for reproduction):}
+  \begin{itemize}
+    \item Track 1 (testing-phase submission used for the final ranking): submission ID \todo{ID}, submitted by user ID \todo{ID}, composite score \todo{score}
+    \item Track 2 (testing-phase submission used for the final ranking; Jetson AGX Orin, ONNX): submission ID \todo{ID}, submitted by user ID \todo{ID}, composite score \todo{score}
+  \end{itemize}
+\item \textbf{Link to the code and trained weights:} \todo{URL (the weights of the reported submission must be included)}
+\item \textbf{Artifact traceability:} code revision / commit \todo{hash}; final checkpoint or ONNX file name \todo{name}; SHA-256 of the final artifact \todo{hash}; link access status and expiry date (if any) \todo{details}
+\item \textbf{Link to the restored images and masks of the reported Track~1 submission (if not included in the package):} \todo{URL}
+\end{itemize}
+
+% =============================================================================
+\section{Global method description}\label{sec:global}
+
+\begin{figure}[!htp]
+    \centering
+    % \includegraphics[width=0.95\linewidth]{images/method_overview.png}
+    \fbox{\parbox{0.9\linewidth}{\centering\vspace{2cm}\todo{Overview figure of your method (put the file in \texttt{images/})}\vspace{2cm}}}
+    \caption{\todo{Overview of the proposed method. Explain the main blocks and the information flow for both outputs (restored image and segmentation mask).}}
+    \label{fig:method}
+\end{figure}
+
+\todo{General method description: the architecture, how restoration and segmentation share (or do not share) features, what is new compared with published work. Add equations if useful. Give credit to all works your solution builds on, for example U-Net-style encoders~\cite{ronneberger2015unet}.}
+
+\begin{itemize}
+\item \textbf{Which pre-trained or external methods / models have been used (for any stage, if any):} \todo{list them with citations, or state ``None''}
+\item \textbf{Which additional data has been used in addition to the provided EURS training data (at any stage, if any):} \todo{dataset names, citations, number of images, how they were used (pre-processing, filtering); or ``None''}
+\item \textbf{Training description:} \todo{framework, optimizer, learning rate schedule, batch size, number of epochs, input/patch size, augmentations, loss functions and weights, hardware, training time}
+\item \textbf{Testing description:} \todo{input resolution at inference, any resizing to the submission size (longest side at most 1024\,px), test-time augmentation or ensembling (if any), hardware}
+\item \textbf{How the training and development scenes were used:} \todo{list the exact scene IDs used for training, for validation and for model selection; state whether the 6 development scenes or the held-out scenes were used in any of these} \\
+\textbf{Compliance with the published EURS data-use rules (see the EURS challenge page on macvi.org):} \todo{Yes / No; explanation}
+\item \textbf{Novelty degree of the solution and whether it has been previously published:} \todo{text}
+\item \textbf{Other methods and baselines tested (even if results were not top competitive):} \todo{text}
+\end{itemize}
+
+% =============================================================================
+\section{Track 1: restoration and segmentation outputs}\label{sec:t1}
+\emph{Skip this section if you did not take part in Track~1.}
+
+\begin{itemize}
+\item \textbf{Submission ID reported for the final ranking:} \todo{ID}
+\item \textbf{Model checkpoint used to produce this submission:} \todo{file name / epoch / commit}
+\item \textbf{How the restored images and the five-class masks are produced:} \todo{one model or two; how each output is obtained from one input image only}
+\item \textbf{Post-processing (if any):} \todo{text, or ``None''}
+\item \textbf{Inference time per image:} \todo{ms, on which GPU, at which resolution}
+\end{itemize}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{lcccccc}
+        \toprule
+        Model & Input size & Epochs & Extra data & Ensemble / TTA & \# Params. (M) & GPU \\
+        \midrule
+        \todo{name} & \todo{H$\times$W} & \todo{N} & \todo{Yes/No} & \todo{Yes/No} & \todo{M} & \todo{GPU} \\
+        \bottomrule
+    \end{tabular}
+    \caption{Training statistics and computational metrics for Track~1.}
+    \label{tab:t1}
+\end{table}
+
+% =============================================================================
+\section{Track 2: ONNX model on the Jetson AGX Orin}\label{sec:t2}
+\emph{Skip this section if you did not take part in Track~2.}
+
+\begin{itemize}
+\item \textbf{Submission ID reported for the final ranking:} \todo{ID}
+\item \textbf{How the ONNX file is produced from the trained weights:} \todo{export script, opset, any simplification or graph changes, quantization (if any)}
+\item \textbf{Static input shape $(1,3,H,W)$:} \todo{H}$\times$\todo{W}; \textbf{outputs:} \texttt{restored\_image}, \texttt{seg\_logits}
+\item \textbf{Complexity of the submitted model:} \todo{GFLOPs} (limit 12) and \todo{M parameters} (limit 1.0\,M)
+\item \textbf{Efficiency measures reported by the pipeline for this submission:} throughput \todo{FPS}, energy per frame \todo{value}
+\item \textbf{Is the model identical to the one used in Track~1?} \todo{Yes / No; describe the difference}
+\item \textbf{Efficiency strategies (pruning, distillation, depthwise convolutions, \dots):} \todo{text}
+\end{itemize}
+
+\begin{table}[h]
+    \centering
+    \resizebox{\linewidth}{!}{%
+    \begin{tabular}{lccccccc}
+        \toprule
+        Model & Input $(H,W)$ & Precision & \# Params. (M) & GFLOPs & Training time & Epochs & Extra data \\
+        \midrule
+        \todo{name} & \todo{H$\times$W} & \todo{FP32/FP16} & \todo{M} & \todo{G} & \todo{h} & \todo{N} & \todo{Yes/No} \\
+        \bottomrule
+    \end{tabular}}
+    \caption{Training statistics and computational metrics for Track~2.}
+    \label{tab:t2}
+\end{table}
+
+% =============================================================================
+\section{Implementation and environment}
+Give the optimizer, learning rate, epochs, loss functions and training data once, in Section~\ref{sec:global}; do not repeat them here.
+\begin{itemize}
+\item \textbf{Programming language and framework (with versions):} \todo{e.g.\ Python, PyTorch}
+\item \textbf{Export and runtime versions (ONNX, opset, TensorRT-related tools, if used):} \todo{versions}
+\item \textbf{Operating system and hardware used for training and for the reproduction run:} \todo{OS, GPU/CPU, memory}
+\item \textbf{External code and dependencies (cite all external code):} \todo{repositories, licences, link to a dependency lock file such as \texttt{requirements.txt} or \texttt{environment.yml}}
+\item \textbf{Efficiency optimization strategies (if any):} \todo{text}
+\end{itemize}
+
+\section{Reproduction procedure}\label{sec:repro}
+\begin{itemize}
+\item \textbf{Installation commands:} \todo{exact commands, in order}
+\item \textbf{Inference commands and entry-point script:} \todo{exact commands, or point to the section of the README in your repository}
+\item \textbf{Checkpoint file name and SHA-256 hash:} \todo{name, hash}
+\item \textbf{Expected input and output structure:} \todo{e.g.\ \texttt{restored/} and \texttt{seg\_masks/} with one file per input image}
+\item \textbf{Fixed seeds and any nondeterministic operations (\texttt{model.eval()}, no test-time randomness):} \todo{text}
+\item \textbf{Expected reproduced result:} \todo{the score you expect from the reproduction; it should match your reported testing-phase result within normal run-to-run variation}
+\item \textbf{Approximate run time of the full reproduction:} \todo{minutes, GPU}
+\end{itemize}
+
+\section{Other details}
+\begin{itemize}
+\item \textbf{Planned submission of a solution description paper to the MaCVi@WACV 2027 workshop:} \todo{Yes / No}
+\item \textbf{General comments and impressions of the EURS challenge (we appreciate your feedback to improve future editions):} \todo{text}
+\item \textbf{What do you expect from a new challenge in underwater image restoration and segmentation?} \todo{text}
+\item \textbf{Known limitations and failure cases of the method:} \todo{text}
+\end{itemize}
+
+\subsection*{Declaration}
+I confirm that all external datasets, pretrained models, ensembles and post-processing used for the reported submission(s) are disclosed in this factsheet; that the submitted code and weights correspond to the named testing-phase submission(s); and that the method complies with the official EURS rules.
+
+\noindent Team leader: \todo{name} \hfill Date: \todo{date}
+
+{\small
+\bibliographystyle{plain}
+\bibliography{ref}
+}
+
+\end{document}

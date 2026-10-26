@@ -28,3 +28,8 @@ The e-mail body lists the challenge name, team name, leader and e-mail, members,
 the best-scoring testing-phase submission ID and its user ID per track, all team members' user IDs, the link to code and weights, and the attachments.
 
 Make the zip: `zip -r factsheet_TEAM_NAME.zip main.tex ref.bib images`
+
+## License
+
+Our text and layout are released under the MIT License (see `LICENSE`). The structure follows the NTIRE 2024 factsheet format, as noted above.
+

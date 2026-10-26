@@ -120,7 +120,6 @@ The body of the e-mail should contain:
   \end{itemize}
 \item \textbf{Link to the reproduction repository (created from the official EURS template, see the instructions on page~1):} \todo{URL of your repository, one per track entered; the weights of the reported submission must be in it or behind the link given in \texttt{weights/weights\_link.yaml}}
 \item \textbf{Artifact traceability:} code revision / commit \todo{hash}; final checkpoint or ONNX file name \todo{name}; SHA-256 of the final artifact \todo{hash}; link access status and expiry date (if any) \todo{details}
-\item \textbf{Link to the restored images and masks of the reported Track~1 submission (if not included in the package):} \todo{URL}
 \end{itemize}
 
 % =============================================================================
@@ -140,9 +139,9 @@ The body of the e-mail should contain:
 \item \textbf{Which pre-trained or external methods / models have been used (for any stage, if any):} \todo{list them with citations, or state ``None''}
 \item \textbf{Which additional data has been used in addition to the provided EURS training data (at any stage, if any):} \todo{dataset names, citations, number of images, how they were used (pre-processing, filtering); or ``None''}
 \item \textbf{Training description:} \todo{framework, optimizer, learning rate schedule, batch size, number of epochs, input/patch size, augmentations, loss functions and weights, hardware, training time}
-\item \textbf{Testing description:} \todo{input resolution at inference, any resizing to the submission size (longest side at most 1024\,px), test-time augmentation or ensembling (if any), hardware}
+\item \textbf{Testing description:} \todo{input resolution at inference, any resizing to the scoring size (exactly 1024\,px on the longest side, aspect ratio kept), test-time augmentation or ensembling (if any), hardware}
 \item \textbf{How the training and development scenes were used:} \todo{list the exact scene IDs used for training, for validation and for model selection; state whether the 6 development scenes or the held-out scenes were used in any of these} \\
-\textbf{Compliance with the published EURS data-use rules (see the EURS challenge page on macvi.org):} \todo{Yes / No; explanation}
+\textbf{Compliance with the EURS rules (challenge page and hand-in announcement), including disclosure of all additional training data:} \todo{Yes / No; explanation}
 \item \textbf{Were the released testing-phase images (inputs) used in any way for training, tuning or model selection (including pseudo-labelling or self-supervised adaptation)?} \todo{Yes / No; if Yes, explain exactly how}
 \item \textbf{Novelty degree of the solution and whether it has been previously published:} \todo{text}
 \item \textbf{Other methods and baselines tested (even if results were not top competitive):} \todo{text}

@@ -55,7 +55,7 @@ This factsheet describes the contribution of each participating team in the EURS
 \end{itemize}
 The factsheet is separate from the code and model weights you hand in for reproduction: provide the code and model-weight link in Section~\ref{sec:team} (Team details) and the exact reproduction commands in Section~\ref{sec:repro}.
 
-\paragraph{Code and weights: use our repository template.} Hand in your code in the format and structure of the official EURS reproduction template at \url{https://github.com/CeviKle/EURS-MaCVi2027-repro-template} (click \emph{Use this template}; one repository per track entered). Follow its README for the required files, the weights rules and the check script (\texttt{repro\_check.py}) to run before you hand in. The repository link goes into Section~\ref{sec:team}.
+\paragraph{Code and weights: use our repository template.} Hand in your code in the format and structure of the official EURS reproduction template at \url{https://github.com/CeviKle/EURS-MaCVi2027-repro-template} (click \emph{Use this template}; one repository per track entered). Follow its README for the required files, the weights rules and the check script (\texttt{repro\_check.py}) to run before you hand in. The repository link goes into Section~\ref{sec:team}. \textbf{Track~2:} the repository also contains \texttt{export\_onnx.py}, the weights and a copy of the ONNX file you uploaded (\texttt{onnx/submitted\_model.onnx}); we regenerate your ONNX in a sandbox, compare it with your leaderboard file, and evaluate it again on the Jetson AGX Orin, for every team.
 
 \begin{table}[h]
 \begin{center}
@@ -180,6 +180,9 @@ The body of the e-mail should contain:
 \begin{itemize}
 \item \textbf{Submission ID reported for the final ranking:} \todo{ID}
 \item \textbf{How the ONNX file is produced from the trained weights:} \todo{export script, opset, any simplification or graph changes, quantization (if any)}
+\item \textbf{Copy of the submitted ONNX file in your repository:} path \todo{\texttt{onnx/submitted\_model.onnx}}; SHA-256 \todo{hash}; this is the exact file you uploaded to the leaderboard for the submission above
+\item \textbf{Software used to produce the submitted ONNX file:} \todo{torch / onnx / exporter versions, opset (a different version only changes the file header, which is fine)}
+\item \textbf{Does \texttt{python repro\_check.py . --export-onnx} regenerate the submitted file from your weights?} \todo{Yes (byte-identical) / Yes (same graph and weights, header differs) / No; explanation}
 \item \textbf{Static input shape $(1,3,H,W)$:} \todo{H}$\times$\todo{W}; \textbf{outputs:} \texttt{restored\_image}, \texttt{seg\_logits}
 \item \textbf{Complexity of the submitted model:} \todo{GFLOPs} (limit 12) and \todo{M parameters} (limit 1.0\,M)
 \item \textbf{Efficiency measures reported by the pipeline for this submission:} throughput \todo{FPS}, energy per frame \todo{value}
@@ -215,6 +218,7 @@ Give the optimizer, learning rate, epochs, loss functions and training data once
 \section{Reproduction procedure}\label{sec:repro}
 \begin{itemize}
 \item \textbf{Installation commands:} \todo{exact commands, in order}
+\item \textbf{Track~2: command that regenerates the ONNX file (normally \texttt{python repro\_check.py . --export-onnx}):} \todo{command, or ``not applicable (Track~1 only)''}
 \item \textbf{Inference commands and entry-point script:} \todo{exact commands, or point to the section of the README in your repository}
 \item \textbf{Checkpoint file name and SHA-256 hash:} \todo{name, hash}
 \item \textbf{Expected input and output structure:} \todo{e.g.\ \texttt{restored/} and \texttt{seg\_masks/} with one file per input image}

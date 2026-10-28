@@ -142,7 +142,8 @@ The body of the e-mail should contain:
 \item \textbf{Testing description:} \todo{input resolution at inference, any resizing to the scoring size (exactly 1024\,px on the longest side, aspect ratio kept), test-time augmentation or ensembling (if any), hardware}
 \item \textbf{How the training and development scenes were used:} \todo{list the exact scene IDs used for training, for validation and for model selection; state whether the 6 development scenes or the held-out scenes were used in any of these} \\
 \textbf{Compliance with the EURS rules (challenge page and hand-in announcement), including disclosure of all additional training data:} \todo{Yes / No; explanation}
-\item \textbf{Were the released testing-phase images (inputs) used in any way for training, tuning or model selection (including pseudo-labelling or self-supervised adaptation)?} \todo{Yes / No; if Yes, explain exactly how}
+\item \textbf{Were the released testing-phase images (their pixels) used in any way for training, fine-tuning, pseudo-labelling or adaptation of the model?} \todo{Yes / No; if Yes, explain exactly how}
+\item \textbf{Which submissions or global settings (seed, ensemble members, weights, thresholds, \dots) were chosen using the leaderboard scores of your testing-phase submissions?} \todo{list each choice with its fixed value, applied identically to every image; or ``None''. This is allowed, but must be stated}
 \item \textbf{Novelty degree of the solution and whether it has been previously published:} \todo{text}
 \item \textbf{Other methods and baselines tested (even if results were not top competitive):} \todo{text}
 \end{itemize}
